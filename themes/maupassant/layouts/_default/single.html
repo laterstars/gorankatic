@@ -1,0 +1,56 @@
+{{ define "content"}}
+<div class="res-cons">
+    {{ partial "toc" . }}
+    <article class="post2">
+        <header>
+            <h1 class="post-title">{{ .Title }}</h1>
+        </header>
+	  <date class="post-meta meta-date">
+            {{ .Date.Year }}-{{ printf "%d" .Date.Month }}-{{ .Date.Day }}
+        </date> 
+        {{ with .Params.Categories }}
+        <div class="post-meta">
+            {{ range . }}
+            <span class="meta-category"><a href='{{ "/categories/" | absLangURL }}{{ . | urlize }}'>{{ . }}</a></span>
+            {{ end }}
+        </div>
+        {{ end }}
+
+
+		    {{ if and (isset .Params "tags") .Params.tags }}
+            <div class="post-meta">
+                {{ range .Params.Tags }}
+
+				 <span class="meta-category"><a href='{{ "/tags/" | absLangURL }}{{ . | urlize }}'>{{ . }}</a></span>
+                {{ end }}
+             </div>
+            {{ else }}
+             
+            {{ end }}
+
+
+
+        {{ if .Params.toc }}
+        <div class="clear" style="display: none">
+            <div class="toc-article">
+                <div class="toc-title">Categories</div>
+            </div>
+        </div>
+        {{ end }}
+
+
+        <div class="post-content">
+            {{ .Content }}
+
+			
+
+        </div>
+
+        {{ partial "copyright" .}}
+
+        {{ partial "related" . }}
+
+    </article>
+    {{ partial "comments" . }}
+</div>
+{{ end }}

@@ -1,0 +1,40 @@
+---
+label: Posts
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- name: description
+  type: text
+  config:
+    required: false
+  label: description
+- type: list
+  name: categories
+  label: categories
+- type: list
+  name: tags
+  label: tags
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: slug
+  label: slug
+- name: featuredimage
+  type: file
+  config:
+    maxSize: 250
+  label: featuredimage
+pages:
+- content/post/10-tips-to-increase-your-productivity-in-vue-js.md
+- content/post/codepen-vs-codesandbox-javascript-playgrounds-compared.md
+- content/post/guide-to-javascript-destructuring-in-es6.md
+- content/post/how-to-automatically-clear-cloudflare-cache-after-deploying-a-netlify-site.md
+- content/post/how-to-generate-static-sites-with-javascript-static-sites-generators.md
+- content/post/how-to-improve-your-programming-skills.md
+- content/post/notion-productivity-review-do-you-use-notion.md
+- content/post/nuke-simple-and-efficient-way-to-download-and-display-images-in-your-app.md
+- content/post/resetting-the-administrator-password-on-a-windows-2012-r2-vm.md
+- content/post/what-is-flutter-and-why-you-should-learn-it-in-2020.md

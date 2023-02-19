@@ -1,0 +1,16 @@
+{{ define "content"}}
+<div class="body404">
+    <div class="info404">
+        <header id="header404" class="clearfix">
+            <div class="site-name404"><i>404</i></div>
+        </header>
+        <section>
+            <div class="title404">
+                <p>Every ordinary day<br />is a miracle in continuity</p>.
+            </div>
+            {{ partial "related" . }}
+            <a rel="nofollow" href="{{ .Site.BaseURL }}" class="index404">Go back to the home page</a>
+        </section>
+    </div>
+</div>
+{{ end }}
